@@ -4,13 +4,9 @@ function Socials() {
   return (
     <div 
   style={{ 
-    position: 'fixed',
-    bottom: '20px',
-    right: '20px',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     gap: '15px',
-    zIndex: 1000
   }}
 >
   <a 

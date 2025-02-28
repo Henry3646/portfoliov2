@@ -7,7 +7,10 @@ import { Download } from 'lucide-react'
 import FadeContent from './components/Animations/FadeContent/FadeContent'
 import Socials from './components/Socials'
 import Navbar from './components/Navbar'
-
+import SkillsSection from './components/Skills/SkillsSection'
+import ProjectsSection from './components/Projects/ProjectsSection'
+import WorkSection from './components/Work/WorkSection'
+import Footer from './components/Footer'
 function page() {
   return (
     <section className="w-screen h-screen">
@@ -23,16 +26,16 @@ function page() {
          
       </div>
       {/* Socials */}
-      <Socials />
+      
       <Navbar />
       <div className="w-full h-full flex justify-center items-center">
       <FadeContent blur={false} duration={1000} easing='ease-in-out' initialOpacity={0}>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center">
           {/* Title */}
-          <h2 className="text-6xl font-bold text-white text-center max-w-[65%]">
-            Building <div className='font-bold text-[#74C365] text-6xl inline'>web apps</div>, <div className='font-bold text-[#74C365] text-6xl inline'>mobile experiences</div>, and everything in between
+          <h2 className="text-6xl font-bold text-white text-center max-w-[65%] ">
+            Building <div className='font-bold text-[#74C365] text-6xl inline'>web apps</div>, <div className='font-bold text-[#74C365] text-6xl inline'>mobile experiences</div>, and <div className='font-bold text-[#74C365] text-6xl inline'>everything</div> in between
           </h2>
-          <p className="text-white">
+          <p className="text-white mt-2">
             I&apos;m Henry, a US-based developer specializing in React for full-stack web apps and cross-platform mobile experiences with React Native.
           </p>
           {/* Buttons */}
@@ -44,13 +47,26 @@ function page() {
                 <Download size={24} className='inline-block mr-2' color='#74C365'/>
                 Download CV
               </button>
+              <Socials />
           </div>
 
         </div>
       </FadeContent>
       </div>
 
-      
+      <FadeContent blur={false} duration={1000} easing='ease-in-out' initialOpacity={0}>
+        <SkillsSection />
+      </FadeContent>
+
+      <FadeContent blur={false} duration={1000} easing='ease-in-out' initialOpacity={0}>
+        <WorkSection />
+      </FadeContent>
+
+      <FadeContent blur={false} duration={1000} easing='ease-in-out' initialOpacity={0}>
+        <ProjectsSection />
+      </FadeContent>
+
+      <Footer />
     </section>
   )
 }
