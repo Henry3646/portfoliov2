@@ -7,6 +7,8 @@ import {
     CarouselPrevious,
   } from "@/components/ui/carousel"
 import GradientText from '../TextAnimations/GradientText/GradientText';
+import { Link } from 'lucide-react';
+import Github from '../Icons/Github';
 
 interface ProjectCardProps {
     title: string;
@@ -30,7 +32,7 @@ function ProjectCard({ projectInfo }: { projectInfo: ProjectCardProps }) {
                 <CarouselNext />
             </Carousel>
         </div>
-        <h2 className='text-2xl font-bold text-white'>{projectInfo.title}</h2>
+        <h2 className='text-2xl font-bold text-white py-4'>{projectInfo.title}</h2>
         <p className='text-white text-sm opacity-40'>{projectInfo.description}</p>
         <div className='flex flex-row gap-2 mt-4'>
             {projectInfo.techStack.map((tech, index) => (

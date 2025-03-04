@@ -11,6 +11,7 @@ import SkillsSection from './components/Skills/SkillsSection'
 import ProjectsSection from './components/Projects/ProjectsSection'
 import WorkSection from './components/Work/WorkSection'
 import Footer from './components/Footer'
+import Contact from './components/Contact/Contact'
 function page() {
   return (
     <section className="w-screen h-screen">
@@ -64,6 +65,10 @@ function page() {
 
       <FadeContent blur={false} duration={1000} easing='ease-in-out' initialOpacity={0}>
         <ProjectsSection />
+      </FadeContent>
+
+      <FadeContent blur={false} duration={1000} easing='ease-in-out' initialOpacity={0}>
+        <Contact />
       </FadeContent>
 
       <Footer />
