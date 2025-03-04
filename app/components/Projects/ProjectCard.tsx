@@ -7,8 +7,6 @@ import {
     CarouselPrevious,
   } from "@/components/ui/carousel"
 import GradientText from '../TextAnimations/GradientText/GradientText';
-import { Link } from 'lucide-react';
-import Github from '../Icons/Github';
 
 interface ProjectCardProps {
     title: string;
