@@ -14,7 +14,7 @@ function WorkSection() {
                 'Develop mobile solutions with React Native',
                 'Improved user workflows through UI/UX enhancements',
             ],
-            skills: ['React', 'React Native' , 'Typescript', 'Core UI', 'COBOL', 'PHP'],
+            skills: ['React', 'React Native' , 'Typescript', 'Core UI', 'COBOL', 'PHP', 'SOAP APIs'],
         },
         {
             company: 'IBM',
@@ -27,18 +27,17 @@ function WorkSection() {
                 "Created dashboards to visualize user interactions",
                 'Contributed to Agile team developing machine learning foundations',
             ],
-            skills: ['React', 'Node.js', 'Express', 'MongoDB', 'Docker'],
+            skills: ['React', 'Node.js', 'Express', 'MongoDB', 'Docker', 'REST APIs', ],
         },
     ]
   return (
     <div className='w-full flex flex-col justify-center items-center py-8'>
       {/* Title */}
-        <div className='max-w-[65%] min-w-[50%] py-2'>
-            <h2 className='text-4xl font-bold text-white text-left'>Work Experience</h2>
+        <div className='w-full md:w-[827px]  py-2'>
+            <h2 className=' text-3xl md:text-4xl font-bold text-white text-left ml-4 md:ml-0'>Work Experience</h2>
         </div>
-        <div className="pt-12 max-w-[50%] min-w-[50%]">
-            {/* Grid Container */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="w-full max-w-full md:max-w-3xl lg:max-w-4xl pt-8 md:pt-12">
+            <div className="grid grid-cols-1 px-4 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
                 {employers.map((employer, index) => (
                     <WorkCard
                         key={index}

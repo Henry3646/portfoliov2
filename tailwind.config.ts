@@ -97,6 +97,16 @@ export default {
           		'0%': { transform: 'translate(0%, 0%)', opacity: '1' },
           		'100%': { transform: 'translate(100%, 0%)', opacity: '0' },
         	},
+			'gradient-x': {
+				'0%, 100%': {
+					'background-size': '200% 100%',
+					'background-position': 'left center'
+				},
+				'50%': {
+					'background-size': '200% 100%',
+					'background-position': 'right center'
+				}
+			}
 		},
 		animation: {
 			shine: 'shine 5s linear infinite',
@@ -105,6 +115,7 @@ export default {
 			gradient: 'gradient 8s linear infinite',
 			'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
         	'star-movement-top': 'star-movement-top linear infinite alternate',
+			'gradient-x': 'gradient-x 3s ease infinite'
 		},
   	}
   },

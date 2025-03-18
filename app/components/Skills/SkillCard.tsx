@@ -9,13 +9,13 @@ interface SkillCardProps {
   
   const SkillCard = ({ title, subtitle, icon, iconBackground }: SkillCardProps) => {
     return (
-        <StarBorder as="button" color='#74C365' speed="6s">
+      <StarBorder as="button" color='#74C365' speed="6s">
       <div className="group flex items-start p-2 rounded-xl">
-        {/* Icon Container */}
+        {/* Icon Container - Always Visible */}
         <div 
-          className="flex items-center justify-center p-2 rounded-lg mr-4"
+          className="flex items-center justify-center p-2 rounded-lg mr-0 md:mr-4"
           style={{ 
-            backgroundColor: `${iconBackground}A9`, // Add 50% opacity (hex '80')
+            backgroundColor: `${iconBackground}A9`,
           }}
         >
           <div className="w-8 h-8 text-white">
@@ -36,14 +36,14 @@ interface SkillCardProps {
             )}
           </div>
         </div>
-  
-        {/* Text Content */}
-        <div className="flex-1 text-left">
+    
+        {/* Text Content - Hidden on Mobile */}
+        <div className="hidden md:block flex-1 text-left">
           <h3 className="text-lg font-semibold text-white">{title}</h3>
           <p className="text-sm text-gray-400 leading-relaxed">{subtitle}</p>
         </div>
       </div>
-      </StarBorder>
+    </StarBorder>
     );
   };
   

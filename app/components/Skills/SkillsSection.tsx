@@ -47,7 +47,7 @@ function SkillsSection() {
         },
         {
           title: "Node.js",
-          subtitle: "Design & prototyping",
+          subtitle: "JavaScript Runtime",
           icon: <NodeJS />,
           iconBackground: "#68A063" // Figma purple
         },
@@ -78,24 +78,24 @@ function SkillsSection() {
   return (
     <div className=' w-full flex flex-col justify-center items-center py-18'>
         {/* Title */}
-        <div className='max-w-[65%] min-w-[50%] py-6'>
-            <h2 className='text-4xl font-bold text-white text-left'>Current Technologies</h2>
-            <span className='flex flex-row'>
+        <div className=' py-6'>
+            <h2 className='text-3xl md:text-4xl font-bold text-white text-left ml-4 md:ml-0'>Current Technologies</h2>
+            <span className='flex flex-col md:flex-row  '>
                 <GradientText
                     colors={['#74C365' , '#4ECDC4' , '#74C365' , '#4ECDC4' , '#74C365']}
                     animationSpeed={3}
                     showBorder={false}
-                    className='inline'
+                    className='inline ml-4 md:ml-0'
                 >
                     Always evolving • 
                 </GradientText>
-                <span className='opacity-50 text-white text-lg'>
-                    &nbsp;Constantly learning new ways to build better software (currently obsessed with Next.js)
+                <span className='opacity-50 text-white text-sm md:text-lg ml-4 md:ml-0 max-w-[95%]'>
+                    Constantly learning new ways to build better software (currently obsessed with Next.js)
                 </span>
             </span>
         </div>
         {/* Skills */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[65%] min-w-[50%] py-6">
+        <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-6  py-6">
             {skills.map((skill, index) => (
                 <SkillCard
                   key={index}

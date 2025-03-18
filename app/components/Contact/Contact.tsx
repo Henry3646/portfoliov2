@@ -1,11 +1,17 @@
+import GradientText from '../TextAnimations/GradientText/GradientText';
+
 const ContactForm = () => {
     return (
-      <section id="contact" className="py-20 px-6 bg-[#111] border-t border-[#222]">
+      <section className="py-20 px-6 bg-[#111] border-t border-[#222]">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Lets Connect</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <div className="text-left mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              <GradientText colors={['#74C365', '#4ECDC4', '#74C365']} animationSpeed={6} className='rounded-sm'>
+                Let's Connect
+              </GradientText>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
               Have a question or want to work together? Drop me a message below!
             </p>
           </div>
@@ -61,9 +67,10 @@ const ContactForm = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-6 py-3 bg-[#74C365] text-white font-medium rounded-lg hover:bg-[#5AA352] transition-colors"
+                className="relative px-8 py-4 text-lg font-semibold text-white rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(116,195,101,0.4)] focus:outline-none focus:ring-2 focus:ring-[#74C365] focus:ring-offset-2 focus:ring-offset-[#111]"
               >
-                Send Message
+                <div className="absolute inset-0 bg-gradient-to-r from-[#74C365] via-[#4ECDC4] to-[#74C365] animate-gradient-x"></div>
+                <span className="relative">Send Message</span>
               </button>
             </div>
           </form>
