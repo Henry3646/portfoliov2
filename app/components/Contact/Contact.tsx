@@ -8,7 +8,7 @@ const ContactForm = () => {
           <div className="text-left mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               <GradientText colors={['#74C365', '#4ECDC4', '#74C365']} animationSpeed={6} className='rounded-sm'>
-                Let's Connect
+                Let&apos;s Connect
               </GradientText>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl">
