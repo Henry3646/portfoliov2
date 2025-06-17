@@ -17,7 +17,7 @@ const ContactForm = () => {
           </div>
   
           {/* Form */}
-          <form className="space-y-6">
+          <form className="space-y-6" action="https://submit-form.com/RwQSEeY7w">
             {/* Name Input */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">

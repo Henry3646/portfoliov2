@@ -3,7 +3,7 @@
 import React from 'react'
 import Squares from './components/Backgrounds/Squares/Squares'
 import ShinyText from './components/TextAnimations/ShinyText/ShinyText'
-import { Download } from 'lucide-react'
+import { Download, Mail } from 'lucide-react'
 import FadeContent from './components/Animations/FadeContent/FadeContent'
 import Socials from './components/Socials'
 import Navbar from './components/Navbar'
@@ -30,6 +30,15 @@ function page() {
       // Update URL without jumping
       window.history.pushState({}, '', `#${id}`);
     }
+  };
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/cv/HenryArlt_Resume.pdf';
+    link.download = 'HenryArlt_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -81,9 +90,18 @@ function page() {
           <ShinyText text='View My Work' disabled={false} speed={2} className="text-sm md:text-base"/>
         </button>
         
-        <button className='px-6 py-3 md:px-4 md:py-2 rounded-lg hover:bg-[#222] transition-all duration-300 ease-in-out w-full md:w-auto text-center'>
+        <button 
+          onClick={downloadCV}
+          className='px-6 py-3 md:px-4 md:py-2 rounded-lg hover:bg-[#222] transition-all duration-300 ease-in-out w-full md:w-auto text-center'>
           <Download size={20} className='inline-block mr-2' color='#74C365'/>
           <span className="text-sm md:text-base">Download CV</span>
+        </button>
+
+        <button 
+          onClick={() => smoothScrollTo('contact')}
+          className='px-6 py-3 md:px-4 md:py-2 rounded-lg hover:bg-[#222] transition-all duration-300 ease-in-out w-full md:w-auto text-center'>
+          <Mail size={20} className='inline-block mr-2' color='#74C365'/>
+          <span className="text-sm md:text-base">Contact Me</span>
         </button>
         
         <div className="mt-4 md:mt-0">
