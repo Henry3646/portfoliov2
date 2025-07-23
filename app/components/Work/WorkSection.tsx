@@ -8,7 +8,7 @@ function WorkSection() {
             position: 'Web Developer',
             duration: 'Jul 2024 - Present',
             location: 'Minnetonka, MN',
-            description: 'Developed and maintained scalable web applications and mobile solutions for enterprise-level casino management systems.',
+            description: 'Developed and maintained scalable web and mobile applications for enterprise casino management systems, modernizing workflows and automating manual processes',
             bulletPoints: [
                 'Modernize legacy applications with React and Typescript',
                 'Develop mobile solutions with React Native',
